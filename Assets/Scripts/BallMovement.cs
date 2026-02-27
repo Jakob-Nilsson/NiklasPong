@@ -1,27 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
     public float speed = 10f;
+
     private Rigidbody2D rb;
+    private Vector2 direction;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
-        // Launch in a random direction
-        Vector2 direction = new Vector2(
-            Random.Range(-1f, 1f),
-            Random.Range(-1f, 1f)
-        ).normalized;
-
-        rb.velocity = direction * speed;
+        // Disable gravity & rotation in Inspector
+        direction = GetRandomDirection();
     }
 
     void FixedUpdate()
     {
-        rb.velocity = rb.velocity.normalized * speed;
+        rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
+    }
+
+    Vector2 GetRandomDirection()
+    {
+        float x = Random.value < 0.5f ? -1f : 1f;
+        float y = Random.Range(-0.75f, 0.75f);
+
+        return new Vector2(x, y).normalized;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Reflect direction manually
+        direction = Vector2.Reflect(direction, collision.contacts[0].normal).normalized;
     }
 }
