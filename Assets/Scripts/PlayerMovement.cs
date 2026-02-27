@@ -22,19 +22,18 @@ public class PlayerMovement : MonoBehaviour
    
     void Update()
     {
-        if (!Input.anyKey)
-        {   
-            direction = 0;
-
-        }
+       
         
         if (Input.GetKey(left))
         {
             direction = -1f;
         }
-        if (Input.GetKey(right))
+        else if (Input.GetKey(right))
         {
             direction = 1f;
+        } else
+        {
+            direction = 0f;
         }
           
         
