@@ -304,7 +304,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rb2D: {fileID: 472009449}
   kontroll: {x: 0, y: 0}
-  speed: 100
+  speed: 15
+  left: 97
+  right: 100
 --- !u!1 &1194532874
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +650,8 @@ MonoBehaviour:
   _rb2D: {fileID: 1593978130}
   kontroll: {x: 0, y: 0}
   speed: 15
+  left: 276
+  right: 275
 --- !u!1 &1650544231
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,7 +956,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7269527224001334964, guid: 58086522f1401dc4fa14133047ab2175, type: 3}
       propertyPath: m_BodyType
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269527224001334964, guid: 58086522f1401dc4fa14133047ab2175, type: 3}
+      propertyPath: m_Constraints
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7385715946875594160, guid: 58086522f1401dc4fa14133047ab2175, type: 3}
       propertyPath: m_Name
@@ -960,7 +968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7385715946875594160, guid: 58086522f1401dc4fa14133047ab2175, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1020,7 +1028,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8934127840059499482, guid: 3e7b0102741615e4fa2503927156aae7, type: 3}
       propertyPath: m_BodyType
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934127840059499482, guid: 3e7b0102741615e4fa2503927156aae7, type: 3}
+      propertyPath: m_Constraints
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9061348867946335202, guid: 3e7b0102741615e4fa2503927156aae7, type: 3}
       propertyPath: m_Name
