@@ -1,18 +1,16 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public float speed = 100f;
+    public float speed;
     [SerializeField] private float maxSpeed = 10f;
 
     private Rigidbody2D rb;
     private Vector2 direction;
 
-    [SerializeField] private float minX = 0.2f;
-    [SerializeField] private float maxX = 0.8f;
-    [SerializeField] private float minY = 0.2f;
-    [SerializeField] private float maxY = 0.8f;
-    public float XAngle;
+    [SerializeField] private float minAngle = 0.2f;
+    [SerializeField] private float maxAngle = 0.8f;
 
     void Start()
     {
@@ -46,64 +44,90 @@ public class Ball : MonoBehaviour
     {
         // Reflect direction manually
         Vector2 temp = Vector2.Reflect(direction, collision.GetContact(0).normal).normalized;
-        CorrectXAngle(temp);
-        CorrectYAngle(temp);
-        XAngle = temp.x;
-        direction = temp.normalized * speed;
+
+        //temp = CorrectXAngle(temp);
+        //temp = CorrectYAngle(temp);
+        if (temp.x < -maxAngle)
+        {
+            temp.x = -maxAngle;
+        }
+        if (temp.x > maxAngle)
+        {
+
+            temp.x = maxAngle;
+        }
+        if (temp.y < -maxAngle)
+        {
+            temp.y = maxAngle;
+
+        }
+        if (temp.y > maxAngle)
+        {
+            temp.y = maxAngle;
+        }
+
+        direction = temp;
+            Debug.Log("normalized V2: " + temp);
+
+        rb.velocity = direction * speed;
+        speed += 1;
+
+            //villkor: om collider == player: ignore collision with collider for 1000ms
         
-        //villkor: om collider == player: ignore collision with collider for 1000ms
     }
 
-    void CorrectXAngle(Vector2 obj)
+    Vector2 CorrectXAngle(Vector2 obj)
     {
-        if (Mathf.Abs(obj.x) < minX) {
+        if (Mathf.Abs(obj.x) < minAngle) {
             if (obj.x < 0)
             {
-                obj.x = -minX;
+                obj.x = -minAngle;
             } else
             {
-                obj.x = minX;
+                obj.x = minAngle;
             } 
         }
 
-        if (Mathf.Abs(obj.x) > maxX)
+        if (Mathf.Abs(obj.x) > maxAngle)
         {
             if (obj.x < 0)
             {
-                obj.x = -maxX;
+                obj.x = -maxAngle;
             }
             else
             {
-                obj.x = maxX;
+                obj.x = maxAngle;
             }
         }
+        return obj;
     }
 
-    void CorrectYAngle(Vector2 obj)
+    Vector2 CorrectYAngle(Vector2 obj)
     {
-        if (Mathf.Abs(obj.y) < minX)
+        if (Mathf.Abs(obj.y) < minAngle)
         {
             if (obj.y < 0)
             {
-                obj.y = -minX;
+                obj.y = -minAngle;
             }
             else
             {
-                obj.y = minX;
+                obj.y = minAngle;
             }
         }
 
-        if (Mathf.Abs(obj.y) > maxX)
+        if (Mathf.Abs(obj.y) > maxAngle)
         {
             if (obj.y < 0)
             {
-                obj.y = -maxX;
+                obj.y = -maxAngle;
             }
             else
             {
-                obj.y = maxX;
+                obj.y = maxAngle;
             }
         }
+        return obj;
     }
 
     
