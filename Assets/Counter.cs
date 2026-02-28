@@ -25,6 +25,6 @@ public class TopWallHitCounter : MonoBehaviour
     private void UpdateUI()
     {
         if (counterText != null)
-            counterText.text = "Top Hits: " + hitCount;
+            counterText.text = "Score: " + hitCount;
     }
 }
