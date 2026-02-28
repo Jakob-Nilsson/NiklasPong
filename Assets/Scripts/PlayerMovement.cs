@@ -14,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
     private KeyCode left;
     [SerializeField]
     private KeyCode right;
-    [SerializeField] private float width;
     private float direction;
     private KeyCode input;
     private Collider2D selfCollider;
@@ -47,17 +46,11 @@ public class PlayerMovement : MonoBehaviour
         _rb2D.velocity = new Vector2(direction * speed, _rb2D.velocity.y);
     }
 
-
-    //Scale difficulty by reducing scale.x on player paddle
-    /*private void OnCollisionEnter2D(Collision2D collision)
+ /*   private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Ball"))
         {
-            width *= 0.9f;
-            //transform.localScale.Set(width,transform.localScale.y, transform.localScale.z);
-            
-            transform.localScale = new Vector2(width, 0.35f);
-           // Physics2D.IgnoreCollision(selfCollider, collision.collider);
+            Physics2D.IgnoreCollision(selfCollider, collision.collider);
         }
     }
  */

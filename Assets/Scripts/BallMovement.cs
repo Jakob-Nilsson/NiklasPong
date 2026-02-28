@@ -46,10 +46,10 @@ public class Ball : MonoBehaviour
         Vector2 normal = collision.GetContact(0).normal.normalized;
         Vector2 temp = Vector2.Reflect(direction, normal).normalized;
         Debug.Log("Normal Vector2: " + normal);
-      //  Debug.Log("In-vector" + temp);
+        Debug.Log("In-vector" + temp);
         //temp = CorrectXAngle(temp);
         //temp = CorrectYAngle(temp);
-       /* if (temp.x < -maxAngle)
+        if (temp.x < -maxAngle)
         {
             temp.x = -maxAngle;
         }
@@ -67,9 +67,9 @@ public class Ball : MonoBehaviour
         {
             temp.y = maxAngle;
         }
-       */
+
         direction = temp;
-         //   Debug.Log("normalized Vector: " + temp);
+            Debug.Log("normalized Vector: " + temp);
 
         rb.velocity = direction * speed;
         //speed += 1;

@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - TopWall
-  - Ball
   layers:
   - Default
   - TransparentFX
