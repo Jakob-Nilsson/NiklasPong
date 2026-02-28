@@ -17,7 +17,8 @@ public class Ball : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
+        //rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
+        rb.AddForce (direction);
     }
 
     Vector2 GetRandomDirection()
@@ -32,5 +33,6 @@ public class Ball : MonoBehaviour
     {
         // Reflect direction manually
         direction = Vector2.Reflect(direction, collision.contacts[0].normal).normalized;
+        //villkor: om collider == player: ignore collision with collider for 1000ms
     }
 }

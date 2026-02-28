@@ -16,10 +16,13 @@ public class PlayerMovement : MonoBehaviour
     private KeyCode right;
     private float direction;
     private KeyCode input;
+    private Collider2D selfCollider;
 
-   
+    private void Start()
+    {
+        selfCollider = GetComponent<Collider2D>();
+    }
 
-   
     void Update()
     {
        
@@ -42,6 +45,15 @@ public class PlayerMovement : MonoBehaviour
     {
         _rb2D.velocity = new Vector2(direction * speed, _rb2D.velocity.y);
     }
+
+ /*   private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Ball"))
+        {
+            Physics2D.IgnoreCollision(selfCollider, collision.collider);
+        }
+    }
+ */
 }
 
 
