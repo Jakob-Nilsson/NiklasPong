@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 413131508}
   m_Layer: 0
   m_Name: RightWall
-  m_TagString: Untagged
+  m_TagString: SideWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6132,7 +6132,7 @@ GameObject:
   - component: {fileID: 1194532878}
   m_Layer: 0
   m_Name: LeftWall
-  m_TagString: Untagged
+  m_TagString: SideWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

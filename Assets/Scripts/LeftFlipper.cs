@@ -4,9 +4,11 @@ public class LeftFlipper : MonoBehaviour
 {
     private HingeJoint2D hinge;
     private JointMotor2D motor;
+    [SerializeField] private KeyCode key;
 
     public float speed = 1500f;
     public float torque = 10000f;
+    [SerializeField] float angle;
 
     void Start()
     {
@@ -17,13 +19,13 @@ public class LeftFlipper : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.N))
+        if (Input.GetKey(key))
         {
-            motor.motorSpeed = speed;   // Rotate toward 45°
+            motor.motorSpeed = speed * angle;   // Rotate toward 45°
         }
         else
         {
-            motor.motorSpeed = -speed;  // Rotate back to 0°
+            motor.motorSpeed = -speed * angle;  // Rotate back to 0°
         }
 
         hinge.motor = motor;
