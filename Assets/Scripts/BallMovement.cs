@@ -43,8 +43,10 @@ public class Ball : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         // Reflect direction manually
-        Vector2 temp = Vector2.Reflect(direction, collision.GetContact(0).normal).normalized;
-
+        Vector2 normal = collision.GetContact(0).normal.normalized;
+        Vector2 temp = Vector2.Reflect(direction, normal).normalized;
+        Debug.Log("Normal Vector2: " + normal);
+        Debug.Log("In-vector" + temp);
         //temp = CorrectXAngle(temp);
         //temp = CorrectYAngle(temp);
         if (temp.x < -maxAngle)
@@ -67,10 +69,10 @@ public class Ball : MonoBehaviour
         }
 
         direction = temp;
-            Debug.Log("normalized V2: " + temp);
+            Debug.Log("normalized Vector: " + temp);
 
         rb.velocity = direction * speed;
-        speed += 1;
+        //speed += 1;
 
             //villkor: om collider == player: ignore collision with collider for 1000ms
         
