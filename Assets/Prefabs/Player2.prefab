@@ -606,7 +606,7 @@ Animator:
   m_GameObject: {fileID: 3411762168832129845}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 021dc4b1823139f47904b42cd74b8dff, type: 2}
+  m_Controller: {fileID: 9100000, guid: c4c02386e8cf36748a9927d49c5bc2b6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -730,6 +730,7 @@ GameObject:
   - component: {fileID: 7526275130638139611}
   - component: {fileID: 5104850883876715032}
   - component: {fileID: 8204134345665198976}
+  - component: {fileID: 2744683945532999166}
   m_Layer: 0
   m_Name: RightTrigger
   m_TagString: Untagged
@@ -918,6 +919,22 @@ MonoBehaviour:
   torque: 10000
   angle: -1
 --- !u!114 &8204134345665198976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5309816637324443654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 842b3181ccfe61a449304b53d0d83daf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 110
+  speed: 1500
+  torque: 10000
+  angle: -1
+--- !u!114 &2744683945532999166
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

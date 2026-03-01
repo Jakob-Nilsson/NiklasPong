@@ -17,7 +17,7 @@ public class SpecialAnimationTrigger : MonoBehaviour
 
         if (mousePressed)
         {
-            animator.SetTrigger("PlaySpecial");
+            animator.SetTrigger("Player1");
         }
     }
 }

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2209562098678651811}
   - component: {fileID: 8394970469402629437}
   - component: {fileID: 708110731606020399}
-  - component: {fileID: 8021529529518839310}
   - component: {fileID: 4745425107043741469}
+  - component: {fileID: 7057067191398833459}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -84,7 +84,19 @@ MonoBehaviour:
   speed: 15
   left: 276
   right: 275
---- !u!95 &8021529529518839310
+--- !u!114 &4745425107043741469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587614018179355069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a197fab14ec3f9c4a8752f72a5adf91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &7057067191398833459
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -105,18 +117,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4745425107043741469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1587614018179355069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a197fab14ec3f9c4a8752f72a5adf91f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1774014474086655056
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,6 +716,7 @@ GameObject:
   - component: {fileID: 4965618188268346194}
   - component: {fileID: 7782547640159660663}
   - component: {fileID: 7725856841506593811}
+  - component: {fileID: 5187353396126237060}
   m_Layer: 0
   m_Name: RightTrigger
   m_TagString: Untagged
@@ -888,6 +889,22 @@ HingeJoint2D:
     m_LowerAngle: -45
     m_UpperAngle: 0
 --- !u!114 &7725856841506593811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7541196107036034714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 842b3181ccfe61a449304b53d0d83daf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 324
+  speed: 1500
+  torque: 10000
+  angle: -1
+--- !u!114 &5187353396126237060
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
