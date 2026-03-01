@@ -17,7 +17,7 @@ public class AnimationPlayer2 : MonoBehaviour
 
         if (keysPressed)
         {
-            animator.SetTrigger("PlaySpecial");
+            animator.SetTrigger("Player2");
         }
     }
 }
