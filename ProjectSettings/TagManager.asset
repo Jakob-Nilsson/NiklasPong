@@ -6,6 +6,8 @@ TagManager:
   tags:
   - TopWall
   - SideWall
+  - BottomWall
+  - BonusSpeed
   layers:
   - Default
   - TransparentFX
