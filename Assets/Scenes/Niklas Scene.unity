@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020128977552682227, guid: d41353f5139790b40a08684ce4828996, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.55
+      value: 11.42
       objectReference: {fileID: 0}
     - target: {fileID: 7020128977552682227, guid: d41353f5139790b40a08684ce4828996, type: 3}
       propertyPath: m_LocalPosition.z
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 413131508}
   m_Layer: 0
   m_Name: RightWall
-  m_TagString: Untagged
+  m_TagString: SideWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -529,7 +529,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 180, y: 100}
+  m_AnchoredPosition: {x: 180, y: 140}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &567683725
@@ -5769,7 +5769,7 @@ GameObject:
   - component: {fileID: 1194532878}
   m_Layer: 0
   m_Name: LeftWall
-  m_TagString: Untagged
+  m_TagString: SideWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6529,7 +6529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2209562098678651811, guid: a99eff5d230ab5b408648ff5f4c08100, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.92
+      value: -10.18
       objectReference: {fileID: 0}
     - target: {fileID: 2209562098678651811, guid: a99eff5d230ab5b408648ff5f4c08100, type: 3}
       propertyPath: m_LocalPosition.z
