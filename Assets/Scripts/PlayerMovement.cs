@@ -11,9 +11,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float speed = 10f;
     [SerializeField]
-    private KeyCode left;
+    public KeyCode left;
     [SerializeField]
-    private KeyCode right;
+    public KeyCode right;
     private float direction;
     private KeyCode input;
     private Collider2D selfCollider;
