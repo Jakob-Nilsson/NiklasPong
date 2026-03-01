@@ -715,7 +715,6 @@ GameObject:
   - component: {fileID: 9029444486489695514}
   - component: {fileID: 4965618188268346194}
   - component: {fileID: 7782547640159660663}
-  - component: {fileID: 7725856841506593811}
   - component: {fileID: 5187353396126237060}
   m_Layer: 0
   m_Name: RightTrigger
@@ -888,22 +887,6 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -45
     m_UpperAngle: 0
---- !u!114 &7725856841506593811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7541196107036034714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 842b3181ccfe61a449304b53d0d83daf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: 324
-  speed: 1500
-  torque: 10000
-  angle: -1
 --- !u!114 &5187353396126237060
 MonoBehaviour:
   m_ObjectHideFlags: 0

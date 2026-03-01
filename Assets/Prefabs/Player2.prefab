@@ -510,7 +510,6 @@ GameObject:
   - component: {fileID: 7020128977552682227}
   - component: {fileID: 564795533403704855}
   - component: {fileID: 1637131040225683345}
-  - component: {fileID: 7276560399876706911}
   - component: {fileID: 2967801502929359717}
   - component: {fileID: 1257531218259725345}
   m_Layer: 0
@@ -584,18 +583,6 @@ MonoBehaviour:
   speed: 15
   left: 97
   right: 100
---- !u!114 &7276560399876706911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3411762168832129845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a197fab14ec3f9c4a8752f72a5adf91f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &2967801502929359717
 Animator:
   serializedVersion: 5
@@ -728,9 +715,7 @@ GameObject:
   - component: {fileID: 4550839130091162715}
   - component: {fileID: 3310712648537236779}
   - component: {fileID: 7526275130638139611}
-  - component: {fileID: 5104850883876715032}
   - component: {fileID: 8204134345665198976}
-  - component: {fileID: 2744683945532999166}
   m_Layer: 0
   m_Name: RightTrigger
   m_TagString: Untagged
@@ -902,39 +887,7 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -45
     m_UpperAngle: 0
---- !u!114 &5104850883876715032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5309816637324443654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 842b3181ccfe61a449304b53d0d83daf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: 324
-  speed: 1500
-  torque: 10000
-  angle: -1
 --- !u!114 &8204134345665198976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5309816637324443654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 842b3181ccfe61a449304b53d0d83daf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: 110
-  speed: 1500
-  torque: 10000
-  angle: -1
---- !u!114 &2744683945532999166
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
